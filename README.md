@@ -1,10 +1,9 @@
  # Repo to learn Aws with practice. Contributions are most welcome.
  # # AWS Learning Guide
 
-This repository serves as a guide for learning Aws,  It offers a variety of cloud services that include computing power, storage, databases, machine learning, and more, which can be used to build, deploy, and manage applications and services over the internet
+This repository serves as a guide for learning Aws,  
 
 ## Table of Contents
-
 
 - 1-Introduction to Aws
 - 2-AWS EBS storage
@@ -15,9 +14,9 @@ This repository serves as a guide for learning Aws,  It offers a variety of clou
 - 7-S3 bucket
 - 8-IAM User
 - 9-RDS
-- 10-Cloud-formation
+- 10-Terraform
 - 11-ECS 
-- 12-EKS
+  
 
 
 
