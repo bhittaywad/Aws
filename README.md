@@ -12,8 +12,8 @@ Introduction to AWS
   
           |-----------------|-----------------|-----------------|
           |     AMI         |      SG         |     ENI         |
-          |     Template    |      Ondemand   | Reseved Instance|
-          |Scheduel instance| Spot Instance   |Dedicated Instanc|
+          |     Template    |      On-demand   | Reseved Instance|
+          |Schedule instance| Spot Instance   |Dedicated Instanc|
           |capacity reserve | Saving plan     |placement group  |
           |Ec2 troubleshot  |networking seting|Moniter and trobl|
           |Ec2 status check |
