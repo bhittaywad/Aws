@@ -1,11 +1,11 @@
  # Repo to learn Aws with practice. Contributions are most welcome.
  # # AWS Learning Guide
 
-This repository serves as a guide for learning Aws,  
+This repository serves as a guide for learning Infra designing,cost optimization,fault tolerant,scalabillity and security  
 
 ## Table of Contents
 
-- 1-Introduction to Aws
+- 1-Introduction to AWS
 - 2-AWS EBS storage
 - 3-VPC
 - 4-Load-balancer
