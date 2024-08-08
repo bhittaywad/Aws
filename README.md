@@ -319,37 +319,47 @@ In the EBS Volumes page, select the newly created volume.
  1- ## Connect to Your EC2 Instance:
   
  2- ## List Available Disks:
- 
+ ```
  lsblk
- 3- ## Format the Volume:
- 
+```
+
+3- ## Format the Volume:
+ ```
  sudo mkfs -t ext4 /dev/xvdf
+ ```
+
 4- ## Create a Mount Point:
 
 - Create a directory where the volume will be mounted:
-- 
+```
   sudo mkdir /mnt/myvolume
+```
 
 5- ## Mount the Volume:
 
 - Mount the volume to the directory
-- 
+```
   sudo mount /dev/xvdf /mnt/myvolume
-  
+  ```
+
  6- ## Verify the Mount:
 
 - Check the mounted file system
-  
+ ``` 
  df -h
+```
+
 7- ## Make the Mount Permanent (Optional):
 
 - To ensure the volume mounts automatically after a reboot, add it to /etc/fstab. Open /etc/fstab with a text editor:
-  
+ ``` 
  vim /etc/fstab
+```
 
 4. # Unmounting and Detaching the Volume
-
+```
   sudo umount /mnt/myvolume
+```
 
  2- ## Detach the Volume:
 
@@ -379,15 +389,22 @@ In the EBS Volumes page, select the newly created volume.
 - If you stopped your instance, go back to the "Instances" section and start it again
   
  4- ## Connect to Your EC2 Instance
+ ```
  - lsblk
+```
 
 5- ## Resize the File System:
-
 - For ext2/ext3/ext4 file systems, use
-- sudo resize2fs /dev/xvda1
+ ```
+ sudo resize2fs /dev/xvda1
+```
 - For XFS file systems, use:
-- growpart /dev/xvda 1
-- xfs_growfs /dev/xvda1
+```
+ growpart /dev/xvda 1
+```
+```
+ xfs_growfs /dev/xvda1
+```
 
   # How to reduce ebs volume
   -  ebs volume cannot reduce volume
@@ -407,22 +424,38 @@ In the EBS Volumes page, select the newly created volume.
 
 - List block devices to identify the attached volumes.
 - Create a file system on the new volume if it doesn’t have one
-- sudo mkfs -t ext4 /dev/xvdf
+```
+ sudo mkfs -t ext4 /dev/xvdf
+```
+
  3- ## Mount Both Volumes
   - Create mount points and mount the volumes
+```
     sudo mkdir /mnt/oldvolume
-    
+```
+```    
 sudo mkdir /mnt/newvolume
-
+```
+```
 sudo mount /dev/xvda1 /mnt/oldvolume
-
+```
+```
 sudo mount /dev/xvdf /mnt/newvolume
+```
+
 4- ## Copy Data:
 - Use rsync or similar tools to copy the data from the old volume to the new one
-- sudo rsync -aAXv /mnt/oldvolume/ /mnt/newvolume/
+```
+ sudo rsync -aAXv /mnt/oldvolume/ /mnt/newvolume/
+```
+
 5- ## Unmount the Volumes after the data has been copied:
-  - sudo umount /mnt/oldvolume
+```
+   sudo umount /mnt/oldvolume
+```
+```
 -sudo umount /mnt/newvolume
+```
 
 3. # Swap Volumes on Your Original Instance
   
